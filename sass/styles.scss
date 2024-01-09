@@ -1,0 +1,26 @@
+$darkColor: #181818;
+$lightColor: #E3E3E3;
+
+*{
+    background-color: $darkColor;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-image: url('/public/img/bgimg.jpg');
+    min-height: 1000px;
+    width: 100%;
+}
+
+h1, h2{
+    color: $lightColor;
+}
+
+button{
+    background-color: $lightColor;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
+}
