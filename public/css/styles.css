@@ -1,18 +1,77 @@
 * {
-  background-color: #181818;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #E3E3E3;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #181818;
 }
 
 header {
   background-image: url("/public/img/bgimg.jpg");
-  min-height: 1000px;
-  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  min-height: 300px;
+  padding: 0 20px;
+}
+@media screen and (min-width: 768px) {
+  header {
+    min-height: 980px;
+  }
+}
+
+.logo {
+  width: 40px;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 80px;
+  }
 }
 
 h1, h2 {
   color: #E3E3E3;
+  width: 100%;
+  text-align: center;
+  text-shadow: 1px solid #181818;
+}
+@media screen and (min-width: 768px) {
+  h1, h2 {
+    text-align: left;
+  }
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 52px;
+  margin-top: 150px;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 92px;
+  }
+}
+h1 span {
+  font-weight: 500;
+}
+
+h2 {
+  text-align: right;
+  font-weight: 100;
+  font-size: 32px;
+  margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 60px;
+  }
+}
+h2 span {
+  font-weight: 400;
 }
 
 button {
@@ -20,4 +79,177 @@ button {
   border: 1px solid white;
   padding: 10px;
   border-radius: 20px;
+  display: block;
+  margin: 20px auto;
+}
+@media screen and (min-width: 768px) {
+  button {
+    display: inline;
+  }
+}
+button a {
+  color: #181818;
+  text-decoration: none;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 52px;
+  margin-top: 40px;
+  text-align: center;
+  text-shadow: #E3E3E3 solid 1px;
+}
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 84px;
+  }
+}
+
+.sobre-nosotros {
+  margin: auto 11px;
+}
+.sobre-nosotros p {
+  display: block;
+  font-size: 1em;
+  font-weight: 100;
+  text-align: center;
+  margin: 11px;
+  line-height: 34px;
+}
+@media screen and (min-width: 768px) {
+  .sobre-nosotros p {
+    font-size: 1.5em;
+    line-height: 1.7em;
+    margin-top: 40px;
+    width: 85%;
+  }
+}
+.sobre-nosotros p .resaltado {
+  font-weight: 500;
+}
+
+.contenedor-secciones {
+  background-image: url("/public/img/3d-abstract-silver.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 60px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .contenedor-secciones {
+    flex-direction: row;
+    background-size: contain;
+    background-position: center;
+  }
+}
+.contenedor-secciones div {
+  height: 150px;
+  border: 1px solid rgba(227, 227, 227, 0.19);
+  box-shadow: 20px 7px 20px 10px rgba(0, 0, 0, 0.55);
+  width: 70%;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 1px solid;
+  background-color: rgba(0, 0, 0, 0.6509803922);
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .contenedor-secciones div {
+    margin: 20px;
+    width: 33%;
+    height: auto;
+  }
+}
+.contenedor-secciones div a {
+  margin: auto;
+  font-weight: 400;
+  font-size: 1em;
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .contenedor-secciones div a {
+    font-size: 1.5em;
+  }
+}
+
+.servicios p {
+  font-size: 1em;
+  font-weight: 100;
+  line-height: 34px;
+  text-align: center;
+  margin-top: 40px;
+}
+.servicios .contenedor-subtitulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .servicios .contenedor-subtitulo {
+    flex-direction: row;
+  }
+}
+.servicios img {
+  width: 150px;
+}
+.servicios h4 {
+  font-size: 45px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .servicios .titulo-izq {
+    text-align: left;
+  }
+  .servicios .titulo-derecha {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .numeros {
+    margin-top: 120px;
+  }
+}
+.numeros div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .numeros div {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.numeros div .cifras {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.numeros div .cifras h5 {
+  font-size: 1.3em;
+}
+.numeros div .cifras p {
+  font-size: 1em;
+  font-weight: 200;
+}
+.numeros img {
+  width: 100%;
+}
+
+footer {
+  height: 50px;
+}
+footer p {
+  margin: auto;
+  width: 100%;
+  font-size: 12px;
 }

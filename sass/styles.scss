@@ -1,21 +1,102 @@
 $darkColor: #181818;
 $lightColor: #E3E3E3;
 
+@mixin tablet {
+    @media screen and (min-width: 480px){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 768px){
+        @content;
+    }
+            }
+
+@mixin xlarge{
+    @media screen and (min-width: 992px){
+        @content;
+    }        
+    }
+
+@mixin texto() {
+    font-size: 1em;
+    font-weight: 100;
+    line-height: 34px;
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+
 *{
-    background-color: $darkColor;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: $lightColor;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+    background-color: $darkColor;
 }
 
 header{
     background-image: url('/public/img/bgimg.jpg');
-    min-height: 1000px;
-    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    min-height: 300px;
+    @include desktop(){
+        min-height: 980px;
+
+    }
+    
+    padding: 0 20px;
+}
+
+.logo{
+    width: 40px;
+    @include desktop(){
+        width: 80px;
+    }
+    
 }
 
 h1, h2{
     color: $lightColor;
+    width: 100%;
+    text-align: center;
+    @include desktop(){
+        text-align: left;
+    }
+   
+    text-shadow: 1px solid $darkColor;
+}
+h1{
+    font-weight: 200;
+    font-size: 52px;
+    @include desktop(){
+        font-size: 92px;
+    }
+    margin-top: 150px;
+    span{
+        font-weight: 500;
+    }
+}
+
+h2{
+    text-align: right;
+    font-weight: 100;
+    font-size: 32px;
+    margin-top: 40px;
+    @include desktop(){
+        font-size: 60px;
+    }
+    span{
+        font-weight: 400;
+    }
 }
 
 button{
@@ -23,4 +104,179 @@ button{
     border: 1px solid white;
     padding: 10px;
     border-radius: 20px;
+    display: block;
+    margin: 20px auto;
+    @include desktop(){
+        display: inline;
+    }
+    a{
+        color: $darkColor;
+        text-decoration: none;
+    }
+}
+
+h3{
+    font-weight: 500;
+    font-size: 52px;
+    margin-top: 40px;
+    @include desktop(){
+        font-size: 84px;
+    }
+    
+    text-align: center;
+    text-shadow: $lightColor solid 1px;
+}
+
+.sobre-nosotros{
+    margin: auto 11px;
+    p{
+        display: block;
+        font-size: 1em;
+        @include desktop(){
+            font-size: 1.5em;
+            line-height: 1.7em;
+            margin-top: 40px;
+            width: 85%;
+        }
+        font-weight: 100;
+        text-align: center;
+        margin: 11px;
+        line-height: 34px;
+        .resaltado{
+            font-weight: 500;
+        }
+
+    }
+}
+
+.contenedor-secciones{
+    background-image: url('/public/img/3d-abstract-silver.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 60px;
+    @include desktop(){
+        flex-direction: row;
+        background-size: contain;
+        background-position: center;
+    }
+    width: 100%;
+    div{
+        height: 150px;
+        border: 1px solid rgb(227 227 227 / 19%);
+        box-shadow: 20px 7px 20px 10px rgb(0 0 0 / 55%);
+        width: 70%;
+        margin: 20px auto;
+        text-align: center;
+        border-radius: 20px;
+        box-shadow: 1px solid ;
+        background-color: #000000a6;
+        display: flex;
+        align-items: center;
+        @include desktop(){
+            margin: 20px;
+            width: 33%;
+            height: auto;
+            
+        }
+        a{
+            margin: auto;
+            font-weight: 400;
+            font-size: 1em;
+            text-decoration: none;
+            @include desktop(){
+                font-size: 1.5em ;
+            }
+        }
+     }
+
+}
+
+.servicios{
+    p{
+        @include texto();
+        
+    }
+    .descripcion-servicio{
+        
+    }
+    .contenedor-subtitulo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 40px;
+        @include desktop(){
+            flex-direction: row;
+        }
+    }
+    img{
+        width: 150px;
+    }
+    h4{
+        font-size: 45px;
+        text-align: center;
+    }
+    @include desktop(){
+        .titulo-izq{
+            text-align: left;
+        }
+        .titulo-derecha{
+            text-align: right;
+        }
+
+    }
+   
+}
+
+
+.numeros{
+    @include desktop(){
+        margin-top: 120px;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        @include desktop(){
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .cifras{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h5{
+                font-size: 1.3em;
+            }
+            p{
+                font-size: 1em;
+                font-weight: 200;
+            }
+        }
+    }
+    img{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+footer{
+    height: 50px;
+    p{
+        margin: auto;
+        width: 100%;
+        font-size: 12px;
+   
+    }
 }
