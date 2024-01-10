@@ -15,8 +15,12 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
+  background-attachment: fixed;
   min-height: 300px;
-  padding: 0 20px;
+  padding: 0 5px;
+}
+header a img {
+  margin: 10px;
 }
 @media screen and (min-width: 768px) {
   header {
@@ -78,9 +82,10 @@ button {
   background-color: #E3E3E3;
   border: 1px solid white;
   padding: 10px;
-  border-radius: 20px;
+  border-radius: 10px;
   display: block;
   margin: 20px auto;
+  padding: 5px 20px;
 }
 @media screen and (min-width: 768px) {
   button {
@@ -90,6 +95,7 @@ button {
 button a {
   color: #181818;
   text-decoration: none;
+  font-size: 10px;
 }
 
 h3 {
@@ -120,7 +126,7 @@ h3 {
   .sobre-nosotros p {
     font-size: 1.5em;
     line-height: 1.7em;
-    margin-top: 40px;
+    margin: 40px auto;
     width: 85%;
   }
 }
@@ -128,14 +134,26 @@ h3 {
   font-weight: 500;
 }
 
-.contenedor-secciones {
+.secciones {
+  display: flex;
+  min-height: 500px;
+  justify-content: center;
   background-image: url("/public/img/3d-abstract-silver.png");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
+  background-position-y: center;
+}
+@media screen and (min-width: 768px) {
+  .secciones {
+    background-size: cover;
+  }
+}
+
+.contenedor-secciones {
   min-height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: 60px;
   width: 100%;
 }
@@ -144,6 +162,7 @@ h3 {
     flex-direction: row;
     background-size: contain;
     background-position: center;
+    margin: 120px auto;
   }
 }
 .contenedor-secciones div {
@@ -184,6 +203,7 @@ h3 {
   line-height: 34px;
   text-align: center;
   margin-top: 40px;
+  margin: 40px 20px;
 }
 .servicios .contenedor-subtitulo {
   display: flex;

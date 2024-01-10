@@ -40,20 +40,27 @@ $lightColor: #E3E3E3;
 
 body{
     background-color: $darkColor;
+
 }
 
 header{
+    a{
+        img{
+        margin: 10px;
+        }
+    }
     background-image: url('/public/img/bgimg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;
+    background-attachment: fixed;
     min-height: 300px;
     @include desktop(){
         min-height: 980px;
 
     }
     
-    padding: 0 20px;
+    padding: 0 5px;
 }
 
 .logo{
@@ -103,15 +110,18 @@ button{
     background-color: $lightColor;
     border: 1px solid white;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     display: block;
     margin: 20px auto;
+    padding: 5px 20px;
     @include desktop(){
         display: inline;
     }
     a{
         color: $darkColor;
         text-decoration: none;
+        font-size: 10px;
+
     }
 }
 
@@ -127,15 +137,17 @@ h3{
     text-shadow: $lightColor solid 1px;
 }
 
+
 .sobre-nosotros{
     margin: auto 11px;
+
     p{
         display: block;
         font-size: 1em;
         @include desktop(){
             font-size: 1.5em;
             line-height: 1.7em;
-            margin-top: 40px;
+            margin: 40px auto;
             width: 85%;
         }
         font-weight: 100;
@@ -149,19 +161,31 @@ h3{
     }
 }
 
-.contenedor-secciones{
+.secciones{
+    display: flex;
+    min-height: 500px;
+    justify-content: center;
     background-image: url('/public/img/3d-abstract-silver.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position-y: center;
+    @include desktop(){
+        background-size: cover;
+        
+    }
+}
+.contenedor-secciones{
+  
     min-height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-top: 60px;
     @include desktop(){
         flex-direction: row;
         background-size: contain;
         background-position: center;
+        margin: 120px auto;
     }
     width: 100%;
     div{
@@ -198,6 +222,7 @@ h3{
 .servicios{
     p{
         @include texto();
+        margin: 40px 20px;
         
     }
     .descripcion-servicio{
