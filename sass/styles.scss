@@ -46,7 +46,7 @@ body{
 header{
     a{
         img{
-        margin: 10px;
+            margin: 10px;
         }
     }
     background-image: url('/public/img/bgimg.jpg');
@@ -59,7 +59,6 @@ header{
         min-height: 980px;
 
     }
-    
     padding: 0 5px;
 }
 
@@ -221,17 +220,11 @@ h3{
 
 }
 
-.servicios{
 
-    
-    }
 .tituloServicio{
     @include desktop(){
-        
     }
-
 }
-    
     .subtitulo{
         line-height: 1.5em;
         font-size: 1.2em;
@@ -241,8 +234,6 @@ h3{
             font-weight: 300;
 
         }
-        
-       
     }
     p{
         @include texto();
@@ -250,9 +241,22 @@ h3{
         
     }
     .contenedor-servicio{
+        margin-top: 120px;
+        @include desktop(){
+            margin-top: 100px;
+            // display: flex;
+            // flex: row;
+        }
+    }
+    .descripcion{
         @include desktop(){
             display: flex;
-            flex: row;
+            align-items: center;
+            p{
+                font-size: 1.5em;
+                text-align: justify;
+                line-height: 1.8em;
+            }
         }
     }
     .descripcion-servicio{
@@ -261,21 +265,16 @@ h3{
         }
         
     }
-    .contenedor-subtitulo{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 40px;
+    .descripcion-logos{
         @include desktop(){
-            flex-direction: column-reverse;
-            align-content: center;
-            flex-wrap: wrap;
-            width: 50%;
+            flex-direction: row-reverse;
         }
     }
+   
     img{
         width: 150px;
+        display: block;
+        margin: auto;
         @include desktop(){
             width: 350px;
         }
@@ -289,9 +288,13 @@ h3{
         .titulo-izq{
             text-align: left;
             width: 100%;
+            margin: auto 20px;
+            font-size: 4em;
         }
         .titulo-derecha{
             text-align: right;
+            margin: auto 20px;
+            font-size: 4em;
         }
 
     }
@@ -300,6 +303,7 @@ h3{
 
 
 .numeros{
+    margin-top: 120px;
     @include desktop(){
         margin-top: 120px;
     }
@@ -317,10 +321,17 @@ h3{
             align-items: center;
             h5{
                 font-size: 1.3em;
+                @include desktop(){
+                    font-size: 2em;
+                }
             }
             p{
                 font-size: 1em;
                 font-weight: 200;
+                @include desktop(){
+                    font-size: 1.5em;
+                    margin: 10px;
+                }
             }
         }
     }
