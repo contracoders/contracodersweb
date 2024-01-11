@@ -146,6 +146,8 @@ h3 {
 @media screen and (min-width: 768px) {
   .secciones {
     background-size: cover;
+    min-height: 1000px;
+    padding: 100px;
   }
 }
 
@@ -167,7 +169,7 @@ h3 {
 }
 .contenedor-secciones div {
   height: 150px;
-  border: 1px solid rgba(227, 227, 227, 0.19);
+  border: 1px solid rgba(227, 227, 227, 0.48);
   box-shadow: 20px 7px 20px 10px rgba(0, 0, 0, 0.55);
   width: 70%;
   margin: 20px auto;
@@ -197,25 +199,19 @@ h3 {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .servicios {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
-}
-.servicios .subtitulo {
+.subtitulo {
   line-height: 1.5em;
   font-size: 1.2em;
 }
 @media screen and (min-width: 768px) {
-  .servicios .subtitulo {
+  .subtitulo {
     font-size: 1.5em;
     line-height: 2em;
     font-weight: 300;
   }
 }
-.servicios p {
+
+p {
   font-size: 1em;
   font-weight: 100;
   line-height: 34px;
@@ -223,18 +219,21 @@ h3 {
   margin-top: 40px;
   margin: 40px 20px;
 }
+
 @media screen and (min-width: 768px) {
-  .servicios .contenedor-servicio {
+  .contenedor-servicio {
     display: flex;
     flex: row;
   }
 }
+
 @media screen and (min-width: 768px) {
-  .servicios .descripcion-servicio {
+  .descripcion-servicio {
     width: 50%;
   }
 }
-.servicios .contenedor-subtitulo {
+
+.contenedor-subtitulo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -242,35 +241,37 @@ h3 {
   margin-top: 40px;
 }
 @media screen and (min-width: 768px) {
-  .servicios .contenedor-subtitulo {
+  .contenedor-subtitulo {
     flex-direction: column-reverse;
     align-content: center;
     flex-wrap: wrap;
     width: 50%;
   }
 }
-.servicios img {
+
+img {
   width: 150px;
 }
 @media screen and (min-width: 768px) {
-  .servicios img {
+  img {
     width: 350px;
   }
 }
-.servicios h4 {
+
+h4 {
   font-size: 45px;
   text-align: center;
 }
+
 @media screen and (min-width: 768px) {
-  .servicios .titulo-izq {
+  .titulo-izq {
     text-align: left;
     width: 100%;
   }
-  .servicios .titulo-derecha {
+  .titulo-derecha {
     text-align: right;
   }
 }
-
 @media screen and (min-width: 768px) {
   .numeros {
     margin-top: 120px;
