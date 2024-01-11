@@ -220,12 +220,43 @@ h3{
 }
 
 .servicios{
+
+    
+    }
+.tituloServicio{
+    @include desktop(){
+        
+    }
+
+}
+    
+    .subtitulo{
+        line-height: 1.5em;
+        font-size: 1.2em;
+        @include desktop(){
+            font-size: 1.5em;
+            line-height: 2em;
+            font-weight: 300;
+
+        }
+        
+       
+    }
     p{
         @include texto();
         margin: 40px 20px;
         
     }
+    .contenedor-servicio{
+        @include desktop(){
+            display: flex;
+            flex: row;
+        }
+    }
     .descripcion-servicio{
+        @include desktop(){
+            width: 50%;
+        }
         
     }
     .contenedor-subtitulo{
@@ -235,19 +266,27 @@ h3{
         justify-content: space-between;
         margin-top: 40px;
         @include desktop(){
-            flex-direction: row;
+            flex-direction: column-reverse;
+            align-content: center;
+            flex-wrap: wrap;
+            width: 50%;
         }
     }
     img{
         width: 150px;
+        @include desktop(){
+            width: 350px;
+        }
     }
     h4{
         font-size: 45px;
         text-align: center;
+       
     }
     @include desktop(){
         .titulo-izq{
             text-align: left;
+            width: 100%;
         }
         .titulo-derecha{
             text-align: right;
@@ -255,7 +294,7 @@ h3{
 
     }
    
-}
+
 
 
 .numeros{
