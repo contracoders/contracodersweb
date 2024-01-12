@@ -17,10 +17,10 @@ header {
   background-position-x: center;
   background-attachment: fixed;
   min-height: 300px;
-  padding: 0 5px;
+  padding: 20px;
 }
 header a img {
-  margin: 10px;
+  display: inline;
 }
 @media screen and (min-width: 768px) {
   header {
@@ -317,6 +317,7 @@ h4 {
 .numeros div .cifras p {
   font-size: 1em;
   font-weight: 200;
+  margin: 10px;
 }
 @media screen and (min-width: 768px) {
   .numeros div .cifras p {
@@ -326,6 +327,34 @@ h4 {
 }
 .numeros img {
   width: 100%;
+}
+
+.trabajos {
+  min-height: 800px;
+}
+
+.faq .contenedor-cono {
+  display: flex;
+  flex-direction: row;
+}
+.faq .cono {
+  width: 150px;
+}
+.faq .contenedor-faq {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.faq .contenedor-faq div {
+  margin: 20px auto;
+  width: 75%;
+}
+.faq .contenedor-faq h4 {
+  font-size: 28px;
+  font-weight: 200;
+}
+.faq .contenedor-faq .respuesta {
+  margin: 10px;
 }
 
 footer {
