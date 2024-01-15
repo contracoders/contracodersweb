@@ -375,7 +375,29 @@ h3{
     }
 }
 
+.contacto{
+    form{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        min-height: 300px;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background: url("../public/img/fondo_contacto.png");
+        label{
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+        button{
+            height: 40px;
+            width: 130px;
+            border-radius: 15px;
+            color:#181818;
 
+        }
+    }
+}
 
 
 

@@ -357,6 +357,27 @@ h4 {
   margin: 10px;
 }
 
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  min-height: 300px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: url("../public/img/fondo_contacto.png");
+}
+.contacto form label {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.contacto form button {
+  height: 40px;
+  width: 130px;
+  border-radius: 15px;
+  color: #181818;
+}
+
 footer {
   height: 50px;
 }
