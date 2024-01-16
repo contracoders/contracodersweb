@@ -87,9 +87,14 @@ button {
   margin: 20px auto;
   padding: 5px 20px;
 }
+button:hover {
+  background-color: #181818;
+  border: #181818;
+}
 @media screen and (min-width: 768px) {
   button {
     display: inline;
+    padding: 10px 20px;
   }
 }
 button a {
@@ -97,12 +102,17 @@ button a {
   text-decoration: none;
   font-size: 10px;
 }
+@media screen and (min-width: 768px) {
+  button a {
+    font-size: 14px;
+  }
+}
 
 h3 {
   font-weight: 500;
   font-size: 52px;
   margin: 26px 48px;
-  text-align: start;
+  text-align: center;
   text-shadow: #E3E3E3 solid 1px;
 }
 @media screen and (min-width: 768px) {
@@ -365,6 +375,7 @@ h4 {
   padding: 40px;
   background: url("../img/fondo_contacto.png");
   background-size: cover;
+  background-attachment: fixed;
 }
 .contacto form label {
   align-items: flex-start;
@@ -392,4 +403,9 @@ footer p {
   margin: auto;
   width: 100%;
   font-size: 12px;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    min-height: 500px;
+  }
 }

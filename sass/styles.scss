@@ -116,13 +116,21 @@ button{
     display: block;
     margin: 20px auto;
     padding: 5px 20px;
+    &:hover{
+        background-color: $darkColor;
+        border: $darkColor;
+    }
     @include desktop(){
         display: inline;
+        padding: 10px 20px;
     }
     a{
         color: $darkColor;
         text-decoration: none;
         font-size: 10px;
+        @include desktop(){
+            font-size: 14px;
+        }
 
     }
 }
@@ -135,7 +143,7 @@ h3{
         font-size: 84px;
     }
     
-    text-align: start;
+    text-align: center;
     text-shadow: $lightColor solid 1px;
 }
 
@@ -385,6 +393,7 @@ h3{
         padding: 40px;
         background: url("../img/fondo_contacto.png");
         background-size: cover;
+        background-attachment: fixed;
         
         label{
             align-items: flex-start;
@@ -418,5 +427,8 @@ footer{
         width: 100%;
         font-size: 12px;
    
+    }
+    @include desktop(){
+        min-height: 500px;
     }
 }
